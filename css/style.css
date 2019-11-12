@@ -1,0 +1,399 @@
+@charset "utf-8";
+
+/*기본css*/
+
+body{
+    font-family: 'NotoSans', sans-serif;
+}
+
+
+body,h1,h2,h3,h4,h5,h6,p{
+    margin:0;
+    
+}
+
+ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.inner{
+    width:1200px;
+    margin:0 auto;
+}
+
+.cf:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+/****전체시작******/
+
+
+#wrap{
+    width:100%
+}
+/********헤더시작**/
+#header{}
+#header .inner{
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;/*이너값으로 줄주는거 */
+    margin-bottom: 30px;
+    padding: 10px 0; /*위아래 10 양옆 0*/
+}
+
+
+#header h1{
+    width: 204px;
+    height: 50px;
+    background: url(../imges/h1_samsungdisplay.gif) no-repeat center center;
+    text-indent:-99999px; /*로고 글자값 뺀거!!★★★★★*/
+    float: left;
+    
+}/*로고 벡그라운드로 넣을땐,, 사진204x28 사이즈대로 사이즈를적어줘야함 로고라고 적혀있는거 없애려고 폰트사이즈 0해놓으면 h1은 아예사라짐 그래서 사이즈를 여기다 적어줘야한다*/
+
+#header h1 a{
+    display:block;/*얘를줘야 로고가 잡힘*/
+}
+#header ul{
+    height: 50px;
+    line-height: 50px;
+}
+
+.gnb{
+    float: left;
+    font-size: 14px;
+    margin-left: 80px;
+}
+.gnb li{
+    float: left;
+}
+.gnb li a{
+    padding: 0 30px;
+    display: block;
+}
+
+.utill{
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+}
+.utill li{
+    padding-left: 15px;
+    float: left;
+}
+.utill li a{}
+
+.utill .on:hover a{
+    color:#007cc0;
+    font-weight: bold;
+}
+
+
+
+/*컨테이너시작*/
+#container{}
+
+.mainSlider{
+    position: relative;/****어느해상도에서도 중간에 보이게****/
+    overflow: hidden;/****어느해상도에서도 중간에 보이게/스크롤 없애는거****/
+
+}
+.sliderImg{
+        height: 600px;/****어느해상도에서도 중간에 보이게****/
+}
+.sliderImg img{
+    position: absolute;/****어느해상도에서도 중간에 보이게****/
+    left:50%;/****어느해상도에서도 중간에 보이게****/
+    margin-left: -960px;/***이건 1920 반싸이즈어느해상도에서도 중간에 보이게****/
+}
+
+.leftBtn,.rightBtn{
+    position: absolute;
+    z-index: 1;
+}
+.leftBtn{
+    bottom: 30px;
+    left:50%;/********어느해상도에도 맞게보는거**************/
+    margin-left: -600px;/********어느해상도에도 맞게보는거**************/
+}
+
+.leftBtn li{
+    width:16px;
+    height:16px;
+    background: url(../imges/blet_visual.png) no-repeat;
+    text-indent: -9999px;/*버튼글자 ㄱ없애기*/
+    float: left;
+    margin-right: 5px;
+    
+}
+.leftBtn li a{
+    display: block;
+}
+.leftBtn .on:hover{
+    background-position: 0 -16px;/*x,y값으로,, 그 사진에 y축을 내리면 하얀버튼 보임*/
+}
+
+
+.rightBtn{
+    bottom:0;
+    right:50%;/********어느해상도에도 맞게보는거**************/
+    margin-right: -600px;/********어느해상도에도 맞게보는거**************/
+}
+.rightBtn li{
+    background: url(../imges/btn_visual_cnt.png) no-repeat -46px 0;
+    width:46px;
+    height:45px;
+    text-indent: -9999px;
+    float: left;
+}
+
+
+.rightBtn li:first-child{
+    background-position: 0 0;
+}
+
+.rightBtn li:last-child{
+    background-position: -92px 0;
+}
+
+
+.rightBtn li a{
+    display: block;
+    height: 100%;
+}
+
+
+
+/************************메인컨텐츠1시작***************************/
+
+.mainCon1{
+    background:#1C97FE;
+    color:#fff;
+    padding: 50px 0;
+}
+.mainCon1 ul{}
+.mainCon1 ul li{
+    float:left;
+    margin-right: 36px;
+    width:273px;
+}
+.mainCon1 ul li:last-child{
+    margin-right: 0;
+}
+
+.mainCon1 ul li h3{
+    font-size: 20px;
+    font-weight: 400;
+}
+.mainCon1 ul li a{
+}
+.mainCon1 ul li a img{
+    width:100%;
+    margin:10px 0;
+}
+.mainCon1 ul li a p{
+    color:#fff;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+
+/*************메인컨텐츠2******************************/
+
+
+
+
+.mainCon2{
+    background: url(../imges/brandSite_bg.png) no-repeat;
+    padding: 40px 0;
+    background-size: cover;
+    text-align: center;
+}
+.mainCon2 h2{
+    text-align: center;/*인라인요소일때만 가능한 센터정렬법...*/
+    margin-bottom: 40px;
+}
+.mainCon2 ul{}
+.mainCon2 ul li{
+    float: left;
+    width: 273px;
+    margin-right: 36px;
+}
+
+.mainCon2 ul li:last-child{
+    margin-right: 0;
+}
+
+.mainCon2 ul li a{
+    display: block;
+}
+.mainCon2 ul li a img{
+    width: 100%;
+}
+.mainCon2 ul li a p{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.viewBtn{
+    width: 120px;
+    display: inline-block;/*이건 블락요소라서 인라인요소로하면 위에 부모값을 받아서 텍스트얼라인 준거 그대로 받아가지고 중간으로 온다 이거말고 센터하려면
+    ★margin:0 auto 하면 지혼자 중간으로온다,,,*/
+    border-radius: 30px;
+    background: #263D94;
+    color:white;
+    font-size:18px;
+    letter-spacing: 2px;
+    padding: 10px 0;
+}
+
+
+
+/*********************메인컨텐츠3*********************************/
+
+
+.mainCon3{
+    padding: 50px 0;
+    
+}
+.mainCon3 h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.mainCon3 h2 img{}
+
+
+.con3Menu{}
+.con3Menu li{
+    width:376px;
+    margin-right: 36px;
+    float: left;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+
+.con3Menu li:hover{
+        box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+        transition:box-shadow;
+}
+
+
+.con3Menu li:last-child{
+    margin-right: 0;
+}
+
+
+.con3Menu li a{}
+.con3Menu li a img{
+    display: block;/****엔터값때문에 생긴 공백값 빼기위해 이미지(인라인요소인)애를 블락해서 엔터값공백을 없애줘야됨..****/
+    width:100%;
+}
+.con3Menu li a h3{
+    
+}
+.con3Menu li a p{}
+
+.brandInfo{
+    padding: 30px;
+}
+
+.brandInfo h3{
+    margin-bottom: 5px;
+    
+}
+
+.brandInfo p{
+    font-size:12px;
+    margin-bottom: 15px;
+}
+.goBtn{
+    width: 110px;
+    text-align: center;
+    background: #2197fc;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 30px;
+}
+
+
+
+/***************************푸터시작**************************/
+
+#footer{
+    border-top: 1px solid #ccc;
+    padding-top: 50px;
+}
+
+#footer .inner{
+    position:relative;
+}
+
+.fLogo{
+    float: left;
+    height:60px;
+    line-height: 60px;
+}
+.fLogo img{}
+
+
+.fInfo{
+    color:#ccc;
+    float: left;
+    margin-left: 50px;
+}
+.fInfo ul{
+
+}
+.fInfo ul li{
+    float: left;
+    font-size: 0;
+}
+
+
+.fInfo ul li:after{
+    content:"";
+    display: inline-block;
+    width:1px;
+    height:8px;
+    background: #ccc;
+    margin:0 3px;
+    
+}
+
+.fInfo ul li:last-child:after{
+    display: none;
+}
+
+.fInfo ul li a{
+    color:#ccc;
+    font-size: 12px;
+}
+
+
+.fInfo p{
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+
+.fMark{
+    position: absolute;
+    right: 0;
+    
+}
+.fMark a{}
+.fMark a img{}
+
+
+
+
+
